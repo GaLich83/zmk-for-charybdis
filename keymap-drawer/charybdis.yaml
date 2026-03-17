@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   base:
-  - ESC
+  - {t: ESC, h: LGUI}
   - Q
   - W
   - E
@@ -142,11 +142,11 @@ layers:
   - ''
   - ''
   - '&bootloader'
-  - RGB TOG
-  - RGB HUI
-  - RGB SAI
-  - RGB BRI
-  - RGB EFF
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - '&mmv MOVE_LEFT'
@@ -155,10 +155,10 @@ layers:
   - ''
   - ''
   - ''
-  - RGB HUD
-  - RGB SAD
-  - RGB BRD
-  - RGB EFR
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - '&msc SCRL_LEFT'
