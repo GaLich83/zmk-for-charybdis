@@ -118,7 +118,7 @@
         automouse {
             bindings = <
 &trans  &trans  &trans          &msc SCRL_UP    &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(S))  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans          &mkp MB3        &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans          &mkp MB1         &mkp MB2    &trans  &trans  &trans
             >;
