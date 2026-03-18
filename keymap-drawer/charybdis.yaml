@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - BSPC
-  - TAB
+  - LSHFT
   - A
   - S
   - D
@@ -25,7 +25,7 @@ layers:
   - L
   - ;
   - ''''
-  - LSHFT
+  - LCTRL
   - Z
   - X
   - C
@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - RSHFT
-  - LCTRL
+  - TAB
   - '&mkp MB1'
   - '&mkp MB2'
   - {t: LALT, h: numbers}
@@ -99,10 +99,10 @@ layers:
   - F10
   - F11
   - F12
-  - CAPS
+  - TAB
   - HOME
   - PG DN
-  - PG UP
+  - PG U1P
   - END
   - INS
   - LEFT
