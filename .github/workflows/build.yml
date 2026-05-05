@@ -1,7 +1,17 @@
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'tools/**'
+      - 'keymap-drawer/**'
+      - '**.md'
+      - '.gitignore'
   pull_request:
+    paths-ignore:
+      - 'tools/**'
+      - 'keymap-drawer/**'
+      - '**.md'
+      - '.gitignore'
   workflow_dispatch:
 
 jobs:
