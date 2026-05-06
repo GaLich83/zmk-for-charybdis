@@ -71,7 +71,7 @@
             bindings = <
 &mt LGUI ESC &ht N1 Q  &ht N2 W  &ht N3 E  &ht N4 R  &ht N5 T     &ht N6 Y     &ht N7 U   &ht N8 I   &ht N9 O  &ht N0 P  &kp BSPC
 &kp LSHFT    &kp A  &kp S  &kp D      &kp F     &kp G        &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&lt 4 LCTRL  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                           &kp TAB  &mkp MB1  &mkp MB2     &lt 1 LALT   &lt 2 SPACE  &lt 3 ENTER
             >;
 
@@ -122,5 +122,18 @@
                 <&scroll_horizontal_encoder>;
         };
 
+        // Layer 4: Scroll (hold LCTRL on left pinky home row)
+        scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans     &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&scroll_vertical_encoder>,
+                <&scroll_horizontal_encoder>;
+        };
 };
 };
