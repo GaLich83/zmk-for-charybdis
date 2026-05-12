@@ -1,12 +1,22 @@
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'tools/**'
+      - 'keymap-drawer/**'
+      - '**.md'
+      - '.gitignore'
   pull_request:
+    paths-ignore:
+      - 'tools/**'
+      - 'keymap-drawer/**'
+      - '**.md'
+      - '.gitignore'
   workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
   release:
     if: github.event_name != 'pull_request'
