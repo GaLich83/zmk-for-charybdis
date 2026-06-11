@@ -17,7 +17,7 @@ manifest:
     #     убран ведущий full-duplex пропуск байта, иначе чтения разъезжаются.
     - name: zmk-pmw3610-driver
       remote: GaLich83
-      revision: 4eb2655323623feee5c2a389049cc604c53c0ee8
+      revision: 6b2972bfdb268ca39d19513e8e4a171d943dfc91
 
   self:
     path: config
