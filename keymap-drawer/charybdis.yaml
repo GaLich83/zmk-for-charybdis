@@ -1,92 +1,8 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  base:
-  - {t: ESC, h: LGUI}
-  - {t: Q, h: '1'}
-  - {t: W, h: '2'}
-  - {t: E, h: '3'}
-  - {t: R, h: '4'}
-  - {t: T, h: '5'}
-  - {t: Y, h: '6'}
-  - {t: U, h: '7'}
-  - {t: I, h: '8'}
-  - {t: O, h: '9'}
-  - {t: P, h: '0'}
-  - BSPC
-  - LSHFT
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - ''''
-  - LCTRL
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - RSHFT
-  - TAB
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - {t: LALT, h: numbers}
-  - {t: SPACE, h: nav_fn}
-  - {t: ENTER, h: system}
-  numbers:
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - DEL
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - \
-  - LSHFT
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - '|'
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - RSHFT
-  - LCTRL
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - {type: held}
-  - SPACE
-  - ENTER
-  nav_fn:
+  '0': [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, CAPS, A, S, D, F, G, H, J, K, L, ;, '''', LEFT SHIFT, Z, X, C, V, B, N, M, ',', ., /, '1', LCTRL, '&mkp MB1', '&mkp
+      MB2', LGUI, SPACE, ENTER]
+  '1':
   - F1
   - F2
   - F3
@@ -100,75 +16,32 @@ layers:
   - F11
   - F12
   - TAB
-  - HOME
-  - PG DN
-  - PG UP
-  - END
-  - INS
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - PSCRN
-  - PAUSE BREAK
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '['
+  - ']'
+  - '{'
+  - '}'
+  - \
+  - '|'
   - LSHFT
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - Ctl+Y
-  - MUTE
-  - VOL DN
-  - VOL UP
-  - BRI DN
-  - BRI UP
-  - RSHFT
-  - LCTRL
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - _
+  - '='
+  - +
+  - '`'
+  - {t: '~', type: held}
+  - LALT
   - '&mkp MB1'
   - '&mkp MB2'
-  - LALT
-  - {type: held}
-  - ENTER
-  system:
+  - ''
   - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - ''
-  - ''
-  - '&mmv MOVE_UP'
-  - ''
-  - ''
-  - '&bootloader'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
-  - '&bootloader'
-  - ''
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - LALT
-  - '&mkp MB2'
-  - {type: held}
+  - BT NXT
