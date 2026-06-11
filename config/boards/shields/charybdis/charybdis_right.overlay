@@ -57,11 +57,6 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        /* 3-проводной SPI (MOSI=MISO на пине 0.17): без half-duplex
-           контроллер давит линию при чтении и сенсор отдаёт искажённые
-           дельты -> фантомный сполз курсора. 2048 = SPI_HALF_DUPLEX.
-           Подмешивается в SPI-операцию через SPI_CONFIG_DT. */
-        duplex = <2048>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         /* CPI — скорость курсора, легко правится одной строкой (200..3200, шаг 200) */
