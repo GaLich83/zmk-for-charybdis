@@ -5,6 +5,7 @@
  */
 
 #include "charybdis.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
@@ -23,8 +24,7 @@
 &right_encoder {
     status = "okay";
 };
-
-// trackball bus (перенесён с левой половины на правую — трекбол физически справа)
+// trackball bus
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -58,8 +58,23 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        //snipe-layers = <2>;
-      // automouse-layer = <3>;
+
+        /* CPI — скорость курсора, легко правится одной строкой (200..3200, шаг 200) */
+        cpi = <800>;
+
+        /* Обязательные для нового драйвера коды осей (относительное перемещение) */
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+
+        /* Ориентация. Старый конфиг был ORIENTATION_90 + INVERT_X.
+           Если курсор поедет не в ту сторону/перепутает оси — крутить
+           именно эти три флага (закомментировать/добавить invert-y). */
+        swap-xy;
+        invert-x;
+
+        /* Держать сенсор бодрым, пока ZMK ACTIVE; в IDLE/SLEEP — дауншифт. */
+        force-awake;
     };
 };
 / {
