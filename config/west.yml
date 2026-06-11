@@ -9,15 +9,15 @@ manifest:
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    # PMW3610-драйвер: ветка zmk-0.3-motion-flush форка (badjeff-based),
-    # запинена на SHA. Совместим с новым pointing-API ZMK v0.3
-    # (CONFIG_ZMK_POINTING). Старый DoctorWangWang/main заморожен с 2024
-    # и под v0.3 не отдавал движение — отсюда был мёртвый курсор.
-    # Эта ветка = zmk-0.3 + motion-flush в конце configure (лечит
-    # фантомный рывок курсора вверх-влево на первое касание).
+    # PMW3610-драйвер: форк GaLich83 (badjeff-based), ветка
+    # zmk-0.3-motion-flush, запинен на SHA. Совместим с новым pointing-API
+    # ZMK v0.3 (CONFIG_ZMK_POINTING). Содержит два фикса поверх zmk-0.3:
+    #  1) motion-flush в конце configure (фантомный рывок на первое касание);
+    #  2) half-duplex чтение регистров (3-проводной SPI, duplex=2048) —
+    #     убран ведущий full-duplex пропуск байта, иначе чтения разъезжаются.
     - name: zmk-pmw3610-driver
       remote: GaLich83
-      revision: 6c0af78a9c68da29d0087c2fcfffe662ab6bf312
+      revision: 2234bb8c88184bb9223162858d1db765dd422878
 
   self:
     path: config
