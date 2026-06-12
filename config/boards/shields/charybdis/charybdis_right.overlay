@@ -45,7 +45,10 @@
 };
 
 &spi0 {
-    status = "okay";
+    /* TRACKBALL DISABLED — suspected hardware drift/repeats/disconnects.
+       Re-enable by restoring status to "okay" here and on &trackball,
+       plus uncommenting CONFIG_PMW3610 lines in charybdis_right.conf. */
+    status = "disabled";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
@@ -53,7 +56,7 @@
     cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
-        status = "okay";
+        status = "disabled";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
